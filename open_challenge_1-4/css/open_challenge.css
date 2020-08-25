@@ -1,0 +1,13 @@
+h1 {color:brown;
+	text-align:center;}
+h2 {color:blue;
+	text-shadow:3px 3px 10px blue;}
+body {background-color:aliceblue;}
+header {border-bottom-width:1px;}
+ul {border:1px;
+	border-style:dotted;}
+a {text-decoration:none;}
+p {font-size:1em;
+	text-indent:1em;}
+footer {background-color:orange;
+	border-radius:10px 10px;}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>소프트웨어 기술</title>
+		<link href="css/survey.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>설문지</h1>
+        소프트웨어 기술에 대한 의견을 듣습니다. 많은 참여 부탁드립니다.<br>
+        <hr>
+        <form>
+            <label>
+                학년 
+                <input type="radio" name="grade" value="1">1학년
+                <input type="radio" name="grade" value="2">2학년
+                <input type="radio" name="grade" value="3">3학년
+                <input type="radio" name="grade" value="4">4학년
+            </label>
+        </form>
+        <br>
+        <form>
+            <label>
+                성별 
+                <input type="radio" name="gender" value="man">남자
+                <input type="radio" name="gender" value="woman">여자
+            </label>
+        </form>
+        <br>
+        <form>
+            <label>
+                관심 분야 
+               <select name="interesting">
+                    <option value="1" selected>모바일 소프트웨어</option>
+                    <option value="2">웹 프로그래밍</option>
+                    <option value="3">C/C++/C#</option>
+                </select>
+            </label>
+        </form>
+        <br>
+        <form>
+            <label>
+                남기고 싶은 말<br>
+                <textarea cols="60" rows="12" name="rest" wrap="hard" placeholder="글을 남겨주세요"></textarea>
+            </label>
+        </form>
+		<footer>
+    	    <p>Copyright 2020 by JaeHyeon</p>
+		</footer>
+    </body>
+</html>
