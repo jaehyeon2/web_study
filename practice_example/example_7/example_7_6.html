@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>방문시간에 따라 배경 바뀜</title>
+	</head>
+	<body>
+		<h3>
+			방문 초시간이 홀수이면 blue, 짝수이면 yellow
+		</h3>
+		<hr>
+		<script>
+			var current = new Date();
+			if(current.getSeconds()%2==0)
+				document.body.style.backgroundColor="yellow";
+			else
+				document.body.style.backgroundColor="blue";
+			document.write("방문시간 : " + current.toLocaleTimeString());
+		</script>
+	</body>
+</html>

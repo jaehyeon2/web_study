@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Math를 이용한 구구단 연습</title>
+		<script>
+			var total=0, score=0;
+			function randomInt(){
+				return Math.floor(Math.random()*9) + 1;
+			}
+			function gugudan(){
+				var question = randomInt() + "*" + randomInt();
+				var answer = prompt(question + "값은 얼마입니까?", "");
+				if (answer==null){
+					document.write("구구단 종료<br>");
+				}
+				else{
+					if(answer==eval(question)){
+						document.write("정답! ");
+						score+=1;
+					}
+					else
+						document.write("아니오! ");
+					total+=1;
+					document.writeln(question + "=" + "<i>" + eval(question) + "</i>입니다.");	
+					document.write(" 입력 값 : " + answer + "<br>");
+					gugudan();
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<h3>
+			Math를 이용한 구구단 연습
+		</h3>
+		<hr>
+		<script>
+			gugudan();
+			document.write("점수 : " + score + "/" + total);
+		</script>
+	</body>
+	
+</html>

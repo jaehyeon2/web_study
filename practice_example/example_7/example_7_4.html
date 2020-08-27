@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Array객체의 메소드 활용</title>
+		<script>
+			function pr(msg, arr){
+				document.write(msg + arr.toString() + "<br>");
+			}
+		</script>
+	</head>
+	<body>
+		<h3>
+			Array객체의 메소드 활용
+		</h3>
+		<hr>
+		<script>
+			var a= new Array("황", "김", "이");
+			var b= new Array("박");
+			var c;
+			
+			pr("a = ", a);
+			pr("b = ", b);
+			document.write("<hr>");
+			
+			c=a.concat(b);
+			document.write("c = a.concat(b) <br>");
+			pr("c = ", c);
+			pr("a = ", a);
+			document.write("<hr>");
+			
+			c=a.join("**");
+			document.write("c = a.join(**) <br>");
+			pr("c = ", c);
+			pr("a = ", a);
+			document.write("<hr>");
+			
+			c=a.reverse();
+			document.write("c = a.reverse() <br>");
+			pr("c = ", c);
+			pr("a = ", a);
+			document.write("<hr>");
+			
+			c=a.slice(1,2);
+			document.write("c = a.slice(1,2) <br>");
+			pr("c = ", c);
+			pr("a = ", a);
+			document.write("<hr>");
+			
+			c=a.sort();
+			document.write("c = a.sort() <br>");
+			pr("c = ", c);
+			pr("a = ", a);
+			document.write("<hr>");
+			
+			c=a.toString();
+			document.write("c = a.toString() <br>");
+			pr("c = ", c);
+			
+		</script>
+	</body>
+</html>
