@@ -4,8 +4,14 @@
 		<title>Math를 이용한 구구단 연습</title>
 		<script>
 			var total=0, score=0;
+			function difficulty(){
+				hard = prompt("몇 단까지?", "9");
+				
+				if (isNaN(hard)||hard<1||hard!=Math.floor(hard))
+					return difficulty();
+			}
 			function randomInt(){
-				return Math.floor(Math.random()*9) + 1;
+				return Math.floor(Math.random()*hard) + 1;
 			}
 			function gugudan(){
 				var question = randomInt() + "*" + randomInt();
@@ -35,6 +41,7 @@
 		</h3>
 		<hr>
 		<script>
+			difficulty();
 			gugudan();
 			document.write("점수 : " + score + "/" + total);
 		</script>
