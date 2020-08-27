@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>객체 생성 및 활용</title>
+	</head>
+	<body>
+		<h3>
+			객체 활용, 생성
+		</h3>
+		<hr>
+		<script>
+			var today = new Date(); //Date 객체 생성
+			document.write("현재 시간 : "+ today.toLocaleString() + "<br>"); //toString() 메소드 호출
+			
+			var mystr = new String("JS study");
+			document.write("mystr의 내용 : " + mystr + "<br>");
+			document.write("mystr의 길이 : " + mystr.length + "<br>");//.length 는 읽기 전용
+			//mystr.length=10; //에러
+			
+		</script>
+	</body>
+</html>
