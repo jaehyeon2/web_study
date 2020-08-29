@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>이벤트흐름</title>
+	</head>
+	<body>
+		이벤트흐름 테스트 <br>
+		<form>
+			<input type="text" name="s">
+			<input type="button" value="테스트" id="button">
+			<hr>
+		</form>
+		<div id="div" style="color:green"></div>
+		<script>
+			var div = document.getElementById("div");
+			var button = document.getElementById("button");
+			
+			document.body.addEventListener("click", capture, true);
+			button.addEventListener("click", capture, true);
+			button.addEventListener("click", bubble, false);
+			//event.stopPropagation(); //이벤트의 흐름을 사라지게함.
+			document.body.addEventListener("click", bubble, false);
+			
+			function capture(e){
+				var obj = e.currentTarget;
+				var tagName = obj.tagName;
+				div.innerHTML += "<br>capture 단계:" + tagName + "태그" + e.type + "이벤트";
+			}
+			function bubble(e){
+				var obj = e.currentTarget;
+				var tagName = obj.tagName;
+				div.innerHTML += "<br>bubble 단계:" + tagName + "태그" + e.type + "이벤트";
+			}
+		</script>
+	</body>
+</html>

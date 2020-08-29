@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>선택 물품 계산</title>
+		<script>
+			var sum=0;
+			function calc(cBox) {
+				if (cBox.checked)
+					sum+=parseInt(cBox.value);
+				else
+					sum-=parseInt(cBox.value);
+				document.getElementById("sumtext").value = sum + "원";
+			}
+		</script>
+	</head>
+	<body>
+		<h3>
+			물품을 선택하면 금액이 자동 계산됩니다.
+		</h3>
+		<hr>
+		<form>
+			<input type="checkbox" name="apple" value="5000"
+				   onclick="calc(this)">사과 5000원
+			<input type="checkbox" name="banana" value="7000"
+				   onclick="calc(this)">바나나 7000원
+			<input type="checkbox" name="melon" value="10000"
+				   onclick="calc(this)">메론 10000원<br>
+			total : <input type="text" id="sumtext" value="0">
+		</form>
+	</body>
+</html>
