@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML 문서 작성기</title>
+		<script>
+			var win=null;
+			function showHTML(){
+				if (win==null||win.closed)
+					win = window.open("", "outWin", "width=300, height=200");
+				var text = document.getElementById("srcText");
+				win.document.open();
+				win.document.write(text.value);
+				win.documnet.close();
+			}
+		</script>
+	</head>
+	<body>
+		<h3>
+			HTML 문서 작성기
+		</h3>
+		<hr>
+		<p>
+			HTML문서를 작성하고 클릭하면 새 윈도우에 HTML 문서가 출력됩니다.
+		</p>
+		<textarea id="srcText" rows="10" cols="50" ></textarea>
+		<br>
+		<br>
+		<button onclick="showHTML()">
+			HTML 문서 출력
+		</button>
+	</body>
+</html>

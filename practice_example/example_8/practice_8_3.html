@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>visibility 프로퍼티</title>
+		<style>
+			span {
+				visibility : hidden;
+				color : blue;
+			}
+		</style>
+		<script>
+			
+			var click = 0;
+			function show() {
+				var objArray = document.getElementsByTagName("span");
+				for(var i=0; i<objArray.length; i++) {
+					var obj = objArray[i];
+	    			var style = window.getComputedStyle(obj);
+	    			var v = style.getPropertyValue("visibility");
+					if(v == "hidden")
+						obj.style.visibility = "visible";
+					else
+						obj.style.visibility = "hidden";		
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h3>
+			다음 빈 칸의 단어? <button onclick="show()">show/hide</button>
+		</h3>
+		<hr>
+		<ul>
+			<li>I (<span style="visibility:hidden">love</span>) you.</li>
+			<li>Css is Cascading (<span style="visibility:hidden">Style</span>) Sheet.</li>
+			<li>응답하라 (<span style="visibility:hidden">1988</span>)</li>
+		</ul>
+	</body>
+</html>

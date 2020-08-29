@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>document.getElementsByTagName()</title>
+		<script>
+			function change(){
+				var spanArray = document.getElementsByTagName("span");
+				for (var i=0; i<spanArray.length; i++){
+					var span = spanArray[i];
+					span.style.color="orchid";
+					span.style.fontSize="20px";
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<h3>
+			과일 <button onclick="change()">
+			클릭!
+			</button>
+		</h3>
+		<hr>
+		apple <span>banana</span> orange grape <span>lemon</span>
+	</body>
+</html>
