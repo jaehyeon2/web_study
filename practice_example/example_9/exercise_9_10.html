@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		
+		<style>
+			button{width:5em; height:2em;}
+		</style>
+		<script>
+			var result = document.getElementById("text");
+			function keypress(){
+				var btn = document.getElementById(this.id);
+				if (btn==back){
+					result[result.length-1]=null;
+				}
+				if (btn==ce||btn==c){
+					result.value=0;
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<h3>
@@ -9,9 +23,44 @@
 		</h3>
 		<hr>
 		<form>
-			<input type="text" id="result" width="15em">
+			<input type="text" id="result" value="3"disabled>
 		</form>
-		<table width="120px" height="6em" border="1px">
+		<br>
+		<table>
+			<tr>
+				<button id="back" onclick="keypress()">BACK</button>
+				<button id="ce" onclick="keypress()">CE</button>
+				<button id="c" onclick="keypress()">C</button>
+				<button id="btn_equal" onclick="keypress()">=</button>
+			</tr>
+			<br>
+			<tr>
+				<button id="num7" onclick="keypress()">7</button>
+				<button id="num8" onclick="keypress()">8</button>
+				<button id="num9" onclick="keypress()">9</button>
+				<button id="btn_div" onclick="keypress()">/</button>
+			</tr>
+			<br>
+			<tr>
+				<button id="num4" onclick="keypress()">4</button>
+				<button id="num5" onclick="keypress()">5</button>
+				<button id="num6" onclick="keypress()">6</button>
+				<button id="btn_mul" onclick="keypress()">*</button>
+			</tr>
+			<br>
+			<tr>
+				<button id="num1" onclick="keypress()">1</button>
+				<button id="num2" onclick="ketpress()">2</button>
+				<button id="num3" onclick="ketpress()">3</button>
+				<button id="btn_minus" onclick="keypress()">-</button>
+			</tr>
+			<br>
+			<tr>
+				<button id="num0" onclick="keypress()">0</button>
+				<button id="btn_plus" onclick="keypress()">+</button>
+				<button id="none" onclick="keypress()">NONE</button>
+				<button id="none" onclick="keypress()">NONE</button>
+			</tr>
 			
 		</table>
 	</body>
