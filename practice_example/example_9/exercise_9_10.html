@@ -2,18 +2,36 @@
 <html>
 	<head>
 		<style>
-			button{width:5em; height:2em;}
+			button{width:4em; height:2em;}
 		</style>
 		<script>
-			var result = document.getElementById("text");
-			function keypress(){
-				var btn = document.getElementById(this.id);
-				if (btn==back){
-					result[result.length-1]=null;
+			var result = "";
+			function keypress(key){
+				result += key;
+				document.getElementById("result").value = result;
+			}
+			function back(){
+				var length = document.getElementById("result").value.length;
+				result = document.getElementById("result").value.substring(0, length - 1);
+				document.getElementById("result").value = result;
+			}
+			function resultclear()
+			{
+				document.getElementById("result").value = "";
+				result = "";
+			}
+			function compute()
+			{
+				if(isFinite(eval(result))){
+					result = eval(result);
+					document.getElementById("result").value = result;
 				}
-				if (btn==ce||btn==c){
-					result.value=0;
+				else{
+					alert("error!");
+					//document.getElementById("result").value = result;
 				}
+				
+				
 			}
 		</script>
 	</head>
@@ -23,43 +41,43 @@
 		</h3>
 		<hr>
 		<form>
-			<input type="text" id="result" value="3"disabled>
+			<input type="text" id="result" value="" disabled>
 		</form>
 		<br>
 		<table>
 			<tr>
-				<button id="back" onclick="keypress()">BACK</button>
-				<button id="ce" onclick="keypress()">CE</button>
-				<button id="c" onclick="keypress()">C</button>
-				<button id="btn_equal" onclick="keypress()">=</button>
+				<button id="back" onclick="back()">BACK</button>
+				<button id="ce" onclick="resultclear()">CE</button>
+				<button id="c" onclick="resultclear()">C</button>
+				<button id="btn_equal" onclick="compute()">=</button>
 			</tr>
 			<br>
 			<tr>
-				<button id="num7" onclick="keypress()">7</button>
-				<button id="num8" onclick="keypress()">8</button>
-				<button id="num9" onclick="keypress()">9</button>
-				<button id="btn_div" onclick="keypress()">/</button>
+				<button id="num7" onclick="keypress('7')">7</button>
+				<button id="num8" onclick="keypress('8')">8</button>
+				<button id="num9" onclick="keypress('9')">9</button>
+				<button id="btn_div" onclick="keypress('/')">/</button>
 			</tr>
 			<br>
 			<tr>
-				<button id="num4" onclick="keypress()">4</button>
-				<button id="num5" onclick="keypress()">5</button>
-				<button id="num6" onclick="keypress()">6</button>
-				<button id="btn_mul" onclick="keypress()">*</button>
+				<button id="num4" onclick="keypress('4')">4</button>
+				<button id="num5" onclick="keypress('5')">5</button>
+				<button id="num6" onclick="keypress('6')">6</button>
+				<button id="btn_mul" onclick="keypress('*')">*</button>
 			</tr>
 			<br>
 			<tr>
-				<button id="num1" onclick="keypress()">1</button>
-				<button id="num2" onclick="ketpress()">2</button>
-				<button id="num3" onclick="ketpress()">3</button>
-				<button id="btn_minus" onclick="keypress()">-</button>
+				<button id="num1" onclick="keypress('1')">1</button>
+				<button id="num2" onclick="keypress('2')">2</button>
+				<button id="num3" onclick="keypress('3')">3</button>
+				<button id="btn_minus" onclick="keypress('-')">-</button>
 			</tr>
 			<br>
 			<tr>
-				<button id="num0" onclick="keypress()">0</button>
-				<button id="btn_plus" onclick="keypress()">+</button>
-				<button id="none" onclick="keypress()">NONE</button>
-				<button id="none" onclick="keypress()">NONE</button>
+				<button id="num0" onclick="keypress('0')">0</button>
+				<button id="btn_plus" onclick="keypress('+')">+</button>
+				<button id="none" onclick="" disabled>NONE</button>
+				<button id="none" onclick="" disabled>NONE</button>
 			</tr>
 			
 		</table>
