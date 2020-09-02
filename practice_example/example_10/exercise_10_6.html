@@ -1,47 +1,43 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>timer</title>
-		<style>
-			div.test {
-				border-width : 1px;
-			}
-		</style>
-		<script>
-			var check = 0;
-			var clock = document.getElementById("clock");
-			
-			function timeChange(){
-				var clock = document.getElementById("clock");
-				var now = new Date();
-				var nowTime = Date.toLocaleTimeString();
-				clock.innerHTML = nowTime;
-			}
-			function clock(){
-				timeChange();
-				var time = setInterval("timeChange", 1000);
-			}
-			function start_stop(){
-				var clock = document.getElementById("clock");
-				if (check==0){
-					clearInterval(time);
-					check=1;
-					clock.style.color="gray";
-				}
-				if (check==1){
-					clock();
-					check=0;
-					clock.style.color="black";
-				}
-			}
-		</script>
-	</head>
-	<body onload = "clock()">
-		<h3>
-			div 태그에 시계 만들기
-		</h3>
-		시계를 클릭하면 시계가 멈추고 다시 클릭하면 시계가 다시 간다.
-		<hr>
-		<div class="test" id="clock" onclick = "start_stop"></div>
-	</body>
+<!doctype html> 
+<html lang="en"> 
+	<head> 
+		<meta charset="UTF-8"> 
+		<title>setInterval()/clearInterval()</title> 
+		<style> 
+			div{ 
+				display : inline-block; 
+				width : 7em; 
+				border : 1px solid gray; 
+				background-color : aliceblue; 
+			} 
+		</style> 
+	</head> 
+	<body onload="div.onclick"> 
+		<h3>div 태그에 시계 만들기</h3> 
+		시계를 클릭하면 시계가 멈추고 다시 클릭하면 가기 시작한다. 
+		<hr> 
+		<div id="div"> 
+		</div> 
+		<script> 
+			var divID = null; 
+			var tog=0;
+			divID = document.getElementById("div"); 
+			var timerID = setInterval("startTimer()", 200); 
+			div.onclick = function(){ 
+				if(tog==1){ 
+					divID.style.color = "black"; 
+					timerID = setInterval("startTimer()", 200); 
+					tog = 0; 
+				}else{ 
+					divID.style.color = "gray"; 
+					clearInterval(timerID); 
+					tog = 1; 
+				} 
+			} 
+			function startTimer(){ 
+				var nowDate = new Date(); 
+				divID.innerHTML = nowDate.toLocaleTimeString(); 
+			} 
+		</script> 
+	</body> 
 </html>
