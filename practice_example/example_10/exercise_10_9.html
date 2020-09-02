@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>산수를 풀어 봅시다</title>
+		<style>
+			td {
+				padding-left : 10px;
+				padding-right : 10px;
+			}
+		</style>
+		<script>
+			var SetTime = 10;
+			window.onload = function TimerStart(){ 
+				var qArray = document.getElementsByClassName("question");
+				var aArray = document.getElementsByClassName("answer");
+				for(i=0; i<qArray.length; i++) {
+					var number1 = Math.floor(Math.random()*20)+1;
+					var number2 = Math.floor(Math.random()*20)+1;
+					var op = Math.floor(Math.random()*4);
+					var operator="+"; // 디폴트
+					switch(op) {
+						case 0 : operator = "+"; break;
+						case 1 : operator = "-"; break;
+						case 2 : operator = "*"; break;
+						case 3 : operator = "/"; break;
+					}
+					qArray[i].innerHTML = number1 + operator + number2;
+					qArray[i].style.textDecoration = "none";
+					
+					aArray[i].value="";
+					document.getElementById("score").innerHTML = 0;
+				}
+				tid=setInterval('restTime()',1000) 
+				
+			};
+			function restTime() {
+				m = Math.floor(SetTime % 60);
+				var msg = "남은 시간:" + m;
+				document.all.ViewTimer.innerHTML = msg;
+				SetTime--;
+				if (SetTime < 0) {
+					clearInterval(tid);	
+					SetTime = 10;
+					calc();
+				}
+			}
+			function calc() {
+				var total = 0;
+				var qArray = document.getElementsByClassName("question");
+				var aArray = document.getElementsByClassName("answer");
+				for(i=0; i<qArray.length; i++) {
+					var question = qArray[i].innerHTML;
+					var correctAnswer = Math.floor(eval(question));
+					var userAnswer = aArray[i].value;
+					if(parseInt(userAnswer) == correctAnswer) {
+						total += 1;
+						qArray[i].style.textDecoration = "none";
+					}
+					else {
+						total += 0;
+						qArray[i].style.textDecoration = "line-through";
+					}
+				}
+				document.getElementById("score").innerHTML = total;
+			}
+			function makeExpression() {
+				location.reload();
+				
+			}
+		</script>
+	</head>
+	<body>
+		<h3>산수 문제를 풀어 봅시다.</h3>
+		문제는 자동으로 생성되며, 10초가 지나면 자동 채점됩니다.<br>
+		<div id="ViewTimer"></div>
+		<hr>
+		<form>
+			<table>
+				<tr><td class="question">5*6</td><td><input class="answer" type="text" size="8"></td></tr>
+				<tr><td class="question">7+5*3</td><td><input class="answer" type="text" size="8"></td></tr>
+				<tr><td class="question">23*2</td><td><input class="answer" type="text" size="8"></td></tr>
+				<tr><td class="question">35-7</td><td><input class="answer" type="text" size="8"></td></tr>
+				<tr><td>	<button type="button" onclick="makeExpression()">다시</button></td>
+					<td><span id="score">0</span>점
+					</td></tr>
+			</table>
+		</form>
+	</body>
+</html>
