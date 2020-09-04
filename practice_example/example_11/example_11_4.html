@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>원호로 하트그리기</title>
+	</head>
+	<body>
+		<h3>
+			원호로 하트그리기
+		</h3>
+		<hr>
+		<canvas id="myCanvas" style="background-color:aliceblue"
+				width="200" height="200"></canvas>
+		<script>
+			var canvas = document.getElementById("myCanvas");
+			var context = canvas.getContext("2d");
+			context.beginPath();
+			context.strokeStyle="magenta";
+			context.arc(100, 100, 50, 0, 1*Math.PI, false);
+			context.arc(125, 100, 25, 0, 1*Math.PI, true);
+			context.arc(75, 100, 25, 0, 1*Math.PI, true);
+			context.stroke();
+		</script>
+	</body>
+</html>
