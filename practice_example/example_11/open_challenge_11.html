@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Open Challenge</title>
+		<style>
+			input[type=text] { width: 42px; }
+		</style>
+		
+		<script>
+			var grade = new Array(5);
+			var per = new Array(5);
+			var color = ["blue", "green", "yellow", "magenta", "red"];
+			var score = ["A", "B", "C", "D", "F"];
+			var deg = 0;
+			
+			function draw() {
+				var sum = 0;
+				for(var i=0; i<5; i++) {
+					grade[i] = document.getElementById(i);
+					sum += Number(grade[i].value);
+				}
+				for(var i=0; i<5; i++) {
+					per[i] = Number(grade[i].value)/sum;
+				}
+				
+				drawChart();
+				drawText();
+				deg = 0;
+			}
+			
+			function drawChart() {
+				var canvas = document.getElementById("chart");
+				var context = canvas.getContext("2d");
+				context.clearRect(0, 0, canvas.width, canvas.height);
+				for(var i=0; i<5; i++) {
+					var d2r = Math.PI/180;
+					var startDeg = deg * d2r;
+					var endDeg = (deg + 360 * per[i]) * d2r; 
+					context.beginPath();
+					context.strokeStyle = color[i];
+					context.fillStyle = color[i];
+					context.moveTo(250, 200);
+					context.arc(250, 200, 150, startDeg, endDeg);
+					context.closePath();
+					context.fill();
+					context.stroke();
+					deg += 360*per[i];
+				}
+			}
+			
+			function drawText() {
+				var canvas = document.getElementById("chart");
+				var context = canvas.getContext("2d");
+				context.fillStyle = "black";
+				for(var i=0; i<5; i++) {
+					var percent = (per[i] * 100).toString();
+					percent = percent.slice(0,2);
+					//context.fillStyle = color[i];
+					context.fillText(score[i] + " 학점 " + percent + "% : " + color[i], 20, 20 + (i*10));
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h3>학점 별로 학생 수를 입력하면 파이 차트로 비율 그리기</h3>
+		<hr>
+		<form>
+			A: <input type="text" id="0" value="1">명
+			B: <input type="text" id="1" value="1">명
+			C: <input type="text" id="2" value="1">명
+			D: <input type="text" id="3" value="1">명
+			F: <input type="text" id="4" value="1">명
+			<input type="button" value="차트그리기" onclick="draw()">
+		</form>
+		<br>
+		<canvas id="chart" style="background: aliceblue" 
+				width="500" height="400"></canvas>
+	</body>
+</html>
