@@ -8,11 +8,12 @@
 			마우스를 누른 채 드래그해서 그림 그리기
 		</h3>
 		<hr>
-		<canvas id="myCanvas" style="background-color:aliceblue" width="400", height="300"></canvas>
+		<canvas id="myCanvas" style="background-color:aliceblue" width="400", height="300">
+		</canvas>
 		<script>
 			var canvas, context
 			function init(){
-				canvas document.getElementById("myCanvas");
+				canvas = document.getElementById("myCanvas");
 				context = canvas.getContext("2d");
 				
 				context.lineWidth = 2;
