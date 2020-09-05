@@ -18,6 +18,10 @@
 				var sum = 0;
 				for(var i=0; i<5; i++) {
 					grade[i] = document.getElementById(i);
+					if(isNaN(Number(grade[i].value))){
+						alert("숫자만 입력하세요");
+						return ;
+					}
 					sum += Number(grade[i].value);
 				}
 				for(var i=0; i<5; i++) {
