@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>단어장 만들기</title>
+	</head>
+	<body>
+		<h3>
+			단어장 만들기
+		</h3>
+		<hr>
+		<form>
+			<label>영어 <input type="text" id="englishWord"></label><br>
+			<label>한글 <input type="text" id="koreanWord"></label>
+		</form>
+		<br>
+		<button id="store" onclick="store()">단어 저장</button>
+		<button id="retrieve" onclick="retrieve()">단어 검색</button>
+		<button id="drop" onclick="del()">단어 삭제</button>
+		<button id="all" onclick="all()">전체 보기</button>
+	</body>
+	<script>
+		var englishWord = document.getElementById("englishWord");
+		var koreanWord = document.getElementById("koreanWord");
+		function store(){
+			if(!window.localStorage){
+				alert("로컬스토리지를 지원하지 않습니다.");
+				return;
+			}
+			if(localStorage[englishWord.value]!=null){
+				var con = confirm(englishWord.value + "은(는) 이미 있습니다. 수정하시겠습니까?");
+				if(con == true){
+					localStorage.setItem(englishWord.value, koreanWord.value);
+				}
+				else{
+				}
+			}
+			if(localStorage[englishWord.value]==null){
+				localStorage.setItem(englishWord.value, koreanWord.value);
+			}
+		}
+		function retrieve(){
+			if(!window.localStorage){
+				alert("로컬스토리지를 지원하지 않습니다.");
+				return;
+			}
+			var eng = localStorage.getItem(englishWord.value);
+			if (eng == null){
+				alert(englishWord.value + "은(는) 없는 단어입니다.");
+			}
+			else{
+				koreanWord.value = eng;
+			}
+		}
+		function del(){
+			if(!window.localStorage){
+				alert("로컬스토리지를 지원하지 않습니다.");
+				return;
+			}
+			localStorage.removeItem(englishWord.value);
+		}
+		function all(){
+			if(!window.localStorage){
+				alert("로컬스토리지를 지원하지 않습니다.");
+				return;
+			}
+			window.open(wordbook.html, "_blank", "");
+		}
+	</script>
+</html>
