@@ -16,7 +16,7 @@
 		<button id="store" onclick="store()">단어 저장</button>
 		<button id="retrieve" onclick="retrieve()">단어 검색</button>
 		<button id="drop" onclick="del()">단어 삭제</button>
-		<button id="all" onclick="all()">전체 보기</button>
+		<!--<button id="all" onclick="all()">전체 보기</button>-->
 	</body>
 	<script>
 		var englishWord = document.getElementById("englishWord");
@@ -58,12 +58,12 @@
 			}
 			localStorage.removeItem(englishWord.value);
 		}
-		function all(){
+		/*function all(){
 			if(!window.localStorage){
 				alert("로컬스토리지를 지원하지 않습니다.");
 				return;
 			}
 			window.open(wordbook.html, "_blank", "");
-		}
+		}*/
 	</script>
 </html>
