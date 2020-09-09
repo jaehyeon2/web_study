@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html style="background: darkgreen;">
+	<head>
+		<title>숨어있는 강아지 찾기</title>
+		<link type="text/css" rel="stylesheet" href="findpuppy.css">
+	</head>
+	<body>
+		<h3 style="text-align:center; color:white">
+			숨어있는 강아지 찾기
+		</h3>
+		<hr>
+		<div id="menuBox">
+			<div id="start" class="buttonBox" onclick="gameStart()" 
+				 onmouseover="over(event)" onmouseout="out(event)">게임시작</div>
+			<div id="remains" class="buttonBox" onmouseover="over(event)" 
+				 onmouseout="out(event)">남은 수 : 8</div>
+			<div id="fails" class="buttonBox" onmouseover="over(event)" 
+				 onmouseout="out(event)">실패 수 : 0</div>
+			<div id="timer" class="buttonBox" onmouseover="over(event)" 
+				 onmouseout="out(event)">시간 : 0</div>
+			<div id="guide" class="buttonBox" onmouseover="over(event)" 
+				 onmouseout="out(event)">게임이 진행될 예정입니다.</div>
+		</div>
+		<table id="gameBox">
+		<script>
+			for(var i=0; i<3; i++) {
+				document.write("<tr>");
+				for(var j=0; j<8; j++) {
+					document.write("<td><img id='egg" + i + j + "' src='egg.gif' onclick='eggCheck(event)' onmouseover='over(event)' onmouseout='out(event)'></td>");
+				}
+				document.write("</tr>");
+			}
+			</script>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+div.buttonBox {
+	border: 1px solid darkgreen;
+	background: antiquewhite;
+	margin-bottom: 5px;
+	padding: 1px;
+}
+#menuBox {
+	position: absolute;
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+	height: 500px;
+}
+#gameBox {
+	left: 210px;
+	position: absolute;
+	width: 700px;
+	height: 400px;
+	background: #CEFF84;
+	margin: auto;
+}
