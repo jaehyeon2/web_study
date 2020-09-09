@@ -22,14 +22,14 @@
 				 onmouseout="out(event)">게임이 진행될 예정입니다.</div>
 		</div>
 		<table id="gameBox">
-		<script>
-			for(var i=0; i<3; i++) {
-				document.write("<tr>");
-				for(var j=0; j<8; j++) {
-					document.write("<td><img id='egg" + i + j + "' src='egg.gif' onclick='eggCheck(event)' onmouseover='over(event)' onmouseout='out(event)'></td>");
+			<script>
+				for(var i=0; i<3; i++) {
+					document.write("<tr>");
+					for(var j=0; j<8; j++) {
+						document.write("<td><img id='egg" + i + j + "' src='egg.gif' onclick='eggCheck(event)' onmouseover='over(event)' onmouseout='out(event)'></td>");
+					}
+					document.write("</tr>");
 				}
-				document.write("</tr>");
-			}
 			</script>
 		</table>
 	</body>
