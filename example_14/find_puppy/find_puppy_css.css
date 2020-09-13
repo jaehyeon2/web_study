@@ -1,17 +1,24 @@
-div.buttonBox {
+html{
+	background:darkgreen;
+}
+h2{
+	text-align:center;
+	color:white;
+}
+div.menu {
 	border: 1px solid darkgreen;
 	background: antiquewhite;
 	margin-bottom: 5px;
 	padding: 1px;
 }
-#menuBox {
+#menuBar {
 	position: absolute;
 	display: inline-block;
 	vertical-align: top;
 	width: 200px;
 	height: 500px;
 }
-#gameBox {
+#gameWindow {
 	left: 210px;
 	position: absolute;
 	width: 700px;
