@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<script src="../jquery.js"></script>
+		<script>
+			$(function(){
+				var arr1=[{
+					"area":"seoul",
+					"name":"moo"
+				},{
+					"area":"busan",
+					"name":"hong"
+				},{
+					"area":"daejeon",
+					"name":"park"
+				},{
+					"area":"seoul",
+					"name":"big"
+				}]
+				
+				var arr2=$.map(arr1, function(a,b){
+					if (a.area =="seoul"){
+						return a;
+					}
+				});
+				console.log(arr2);
+				console.log("====first End====");
+				
+				var arr3=$.grep(arr1, function(a,b){
+					if(a.area=="seoul"){
+						return true;
+					}
+					else {
+						return false;
+					}
+				});
+				
+				console.log(arr3);
+				console.log("====Second End====");
+			});
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

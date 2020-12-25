@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<script src="../jquery.js"></script>
+		<script>
+			$(function(){
+				var obj=[
+					{"area":"서울"}
+					, {"area":"부산"}
+					, {"area":"전주"}
+				]
+				
+				$(obj).each(function(i, o){
+							console.log(i+":",o);
+							});
+				console.log("====The End1====");
+				
+				$.each($("#menu2 li"), function(i, o){
+							console.log(i+":",o);
+							});
+				console.log("====The End2====");
+				
+				$.each($("#menu2 li"), function(i){
+							console.log(i+":",$(this));
+							});
+			})
+		</script>
+	</head>
+	<body>
+		<h1>
+			탐색선택자
+		</h1>
+		<ul id="menu1">
+			<li>content1-1</li>
+			<li>content1-2</li>
+			<li>content1-3</li>
+			</ul>
+		<ul id="menu2">
+			<li>content2-1</li>
+			<li>content2-2</li>
+			<li>content2-3</li>
+			</ul>
+	</body>
+</html>
