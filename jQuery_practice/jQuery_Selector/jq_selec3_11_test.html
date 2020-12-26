@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script src="../jquery.js"></script>
+		<script>
+			$(function(){
+				var copyObj = $(".box1").children().clone();//class box1의 모든 자식 요소들을 복사하여 copyObj에 저장
+				$(".box2").remove();//삭제
+				$(".box3").empty();
+				$(".box3").append(copyObj);
+			})
+		</script>
+	</head>
+	<body>
+		<div class="box1">
+			<p>
+				content1
+			</p>
+			<p>
+				content2
+			</p>
+		</div>
+		<div class="box2">
+			<p>
+				content3
+			</p>
+			<p>
+				content4
+			</p>
+		</div>
+		<div class="box3">
+			<p>
+				content5
+			</p>
+			<p>
+				content6
+			</p>
+		</div>
+	</body>
+</html>
