@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<script src="../../jquery.js"></script>
+		<script>
+			$(function(){
+				$("strong").unwrap();//strong 요소를 감싸는 부모 요소 제거
+				$(".ct1").wrap("<div />");
+				$(".ct2").wrapAll("<div />");
+				$("li").wrapInner("<h3 />");
+			});
+		</script>
+		<style>
+			div{background-color:aqua;}
+		</style>
+	</head>
+	<body>
+		<h1 id="tit_1">
+			<strong>객체 조작 및 생성</strong>
+		</h1>
+		<p class="ct1">content1</p>
+		<p class="ct1">content2</p>
+		<p class="ct2">content3</p>
+		<p class="ct2">content4</p>
+		<ul>
+			<li>content3</li>
+			<li>content4</li>
+		</ul>
+	</body>
+</html>
