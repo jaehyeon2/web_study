@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<script src="../jquery.js"></script>
+		<script>
+			$(function(){
+				$(".wrap_1 p:first").text("content1");
+				$(".wrap_1 p.active").removeClass("active").addClass("on");
+				$(".wrap_1 p:eq(2) a").attr("href", "https://naver.com");
+				$(".wrap_1 p:eq(3) input").val("KOREA");
+				$(".wrap_2 p:first").after("After(추가1)");
+				$(".wrap_2 p:first").before("Before(추가2)");
+				$(".wrap_3 p").unwrap().wrapInner("<strong/>");
+			});
+		</script>
+	</head>
+	<body>
+		<div class="wrap_1">
+			<p>
+				text1
+			</p>
+			<p class="active">
+				content2
+			</p>
+			<p>
+				<a href="#">네이버</a>
+			</p>
+			<p>
+				<input type="text" value="Hello">
+			</p>
+		</div>
+		<div class="wrap_2">
+			<p>
+				content5
+			</p>
+			<p>
+				content6
+			</p>
+		</div>
+		<div class="wrap_3">
+			<div>
+				<p>
+					content7
+				</p>
+				<p>
+					content8
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
