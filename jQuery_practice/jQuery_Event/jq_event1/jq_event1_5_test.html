@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script src="../../jquery.js"></script>
+		<script>
+			$(function(){
+				$(".btn1").on("click", function(e){
+					e.preventDefault();//<a> 요소의 링크로 이동하는 것을 차단함
+					$(".txt1").css({"background-color":"#ff0"});
+				});
+				$(".btn2").on("click", function(e){
+					$(".txt2").css({"background-color":"0ff"});
+				});
+				$(".btn3").on("dbclick", function(){
+					$(".txt3").css({"background-color":"#0f0"});
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<p>
+			<a href="https://www.naver.co.kr/" class="btn1">button1</a>
+		</p>
+		<p class="txt1">
+			content1
+		</p>
+		<p>
+			<a href="https://www.naver.co.kr/" class="btn2">button2</a>
+		</p>
+		<p class="txt2">
+			content2
+		</p>
+		<p>
+			<button class="btn3">
+				button3
+			</button>
+		</p>
+		<p class="txt3">
+			content3
+		</p>
+	</body>
+</html>
