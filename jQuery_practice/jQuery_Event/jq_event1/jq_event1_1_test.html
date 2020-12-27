@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script src="../../jquery.js"></script>
+		<script>
+			$(function(){
+				$(".btn1").click(function(){
+					$(".btn1").parent().next().css({"color":"red"});
+				});
+				
+				$(".btn2").on({
+					"mouseover focus":function(){
+						$(".btn2").parent().next().css({"color":"green"});
+					},
+					"mouseout blur":function(){
+						$(".btn2").parent().next().css({"color":"black"});
+					}
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<p>
+			<button class="btn1">
+				button1
+			</button>
+		</p>
+		<p>
+			content1
+		</p>
+		<p>
+			<button class="btn2">
+				button2
+			</button>
+		</p>
+		<p>
+			content2
+		</p>
+	</body>
+</html>
