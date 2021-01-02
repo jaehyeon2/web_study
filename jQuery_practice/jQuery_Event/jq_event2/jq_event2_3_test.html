@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script src="../../jquery.js"></script>
+		<script>
+			$(function(){
+				$("#rel_site").on("change", function(){
+					$(".txt").text($(this).val());
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<select id="rel_site">
+			<option value="" text="">site select</option>
+			<option value="https://www.naver.com" >naver</option>
+			<option value="https://www.google.com" >google</option>
+			<option value="https://www.daum.net" >daum</option>
+		</select>
+		<br>
+		<a  class="txt"></a>
+	</body>
+</html>
