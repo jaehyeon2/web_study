@@ -5,6 +5,7 @@
 			$(function(){
 				$("#rel_site").on("change", function(){
 					$(".txt").text($(this).val());
+					$(".txt").prop("href", $(this).val());
 				})
 			})
 		</script>
@@ -17,6 +18,6 @@
 			<option value="https://www.daum.net" >daum</option>
 		</select>
 		<br>
-		<a  class="txt"></a>
+		<a  href="" class="txt"></a>
 	</body>
 </html>
