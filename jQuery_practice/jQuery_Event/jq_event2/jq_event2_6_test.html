@@ -3,14 +3,17 @@
 		<script src="../../jquery.js"></script>
 		<script>
 			$(function(){
-				$(".btn_1.on").on("mouseover focus", function(){
+				$(".btn_1.on").on("click", function(){
 					alert("HELLO!");
 				});
 				$(".btn_1").addClass("on");
 				//이벤트를 등록하고 클래스 값을 생성하면 이벤트가 정상적으로 등록되지 않음
 				
-				$(document).on("mouseover focus", ".btn_2.on", function(){
+				$(document).on("click", ".btn_2.on", function(){
 					alert("WELCOME!");
+				});
+				$(document).on("dblclick", ".btn_2.on", function(){
+					alert("HELLO!");
 				});
 				$(".btn_2").addClass("on");
 				//라이브 이벤트 방식으로 이벤트를 등록하고 클래스 값을 생성하면 이벤트가 정상적으로 등록됨
