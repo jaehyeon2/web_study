@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script src="../../jquery.js"></script>
+		<script>
+			$(function(){
+				$(".btn_1.on").on("mouseover focus", function(){
+					alert("HELLO!");
+				});
+				$(".btn_1").addClass("on");
+				//이벤트를 등록하고 클래스 값을 생성하면 이벤트가 정상적으로 등록되지 않음
+				
+				$(document).on("mouseover focus", ".btn_2.on", function(){
+					alert("WELCOME!");
+				});
+				$(".btn_2").addClass("on");
+				//라이브 이벤트 방식으로 이벤트를 등록하고 클래스 값을 생성하면 이벤트가 정상적으로 등록됨
+			})
+		</script>
+	</head>
+	<body>
+		<div id="wrap">
+			<p><button class="btn_1">버튼1</button></p>
+			<p><button class="btn_2">버튼2</button></p>
+		</div>
+	</body>
+</html>
