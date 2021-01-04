@@ -21,6 +21,15 @@
 				
 				$(".btn3").on("click", function(){
 					$(".box").slideToggle(1000, "linear");
+					if($(".box").css("display") == "none"){
+						$(".btn2").hide();
+						$(".btn1").show();
+					}
+					else{
+						$(".btn2").show();
+						$(".btn1").hide();
+						
+					}
 				})
 				
 				$(".btn4").on("click", function(){
