@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<script src="../jquery.js"></script>
+		<script>
+			$(function(){
+				$(".txt1").animate({marginLeft:"300px"}, 1000);
+				
+				$(".txt2").delay(3000).animate({marginLeft:"300px"}, 1000);
+				//3초 후에 애니메이션이 실행됨
+				
+				function movement(){
+					$(".txt3").animate({marginLeft:"+=50px"}, 800);
+					
+					$(".txt4").animate({matginLeft:"+=50px"}, 800);
+					$(".txt4").stop();
+					//stop() 함수 때문에 버튼을 눌러도 더이상 애니메이션이 동작하지 않음
+					
+					$(".txt5").animate({marginLeft:"+=50px"}, 800);
+					$(".txt5").stop(true, true);
+					//애니메이션이 바로 종료 시점으로 이동
+				}
+				$(".btn1").on("click", movement);
+			});
+		</script>
+		<style>
+			p{width: 110px;text-align: center;}
+			.txt1{background-color: aqua;}
+			.txt2{background-color: pink;}
+			.txt3{background-color: orange;}
+			.txt4{background-color: green;}
+			.txt5{background-color: gold;}
+		</style>
+	</head>
+	<body>
+		<p class="txt1">효과1</p>
+		<p class="txt2">효과2<br> delay(3000)</p>
+		
+		<p><button class="btn1">50px 전진</button></p>
+		<p class="txt3">효과3</p>
+		<p class="txt4">효과4<br>stop( )</p>
+		<p class="txt5">효과5<br>stop(true, true)</p>
+	</body>
+</html>
