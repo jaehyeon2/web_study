@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<script src="../jquery.js"></script>
+		<script>
+			$(function(){
+				$.ajax({
+					url:"MOCK_DATA.json",
+					dataType:"json",
+					success:function(data){
+						if(data.length>0){
+							var tb=$("<table />");
+							for(var i in data){
+								var $id=data[i].id;
+								var $first_name=data[i].first_name;
+								var $last_name=data[i].last_name;
+								var $email=data[i].email;
+								
+								var row=$("<tr />").append(
+									$("<td />").text($id),
+									$("<td />").text($first_name),
+									$("<td />").text($last_name),
+									$("<td />").text($email)
+								);
+								
+								tb.append(row);
+							}
+							$(".wrap").append(tb);
+						}
+					}
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="wrap"></div>
+	</body>
+</html>
