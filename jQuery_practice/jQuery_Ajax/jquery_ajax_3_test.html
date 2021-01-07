@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<script src="../jquery.js"></script>
+		<script>
+			$(function(){
+				$.ajax({
+					url:"dataset.xml",
+					//html에 xml데이터를 불러와 바인딩
+					dataType:"xml",
+					success:function(data){
+						var $data=$(data).find("record");
+						//find() 메서드를 이용해 얻은 record 객체를 참조
+						if($data.length>0){
+							var tb=$("<table />");
+							$.each($data, function(i, o){
+								var $id= $(o).find("id").text();
+								var $first_name= $(o).find("first_name").text();
+								var $last_name= $(o).find("last_name").text();
+								var $email= $(o).find("email").text();
+								var $gender= $(o).find("gender").text();
+								
+								var row=$("<tr />").append(
+									$("<td />").text($id),
+									$("<td />").text($first_name),
+									$("<td />").text($last_name),
+									$("<td />").text($email),
+									$("<td />").text($gender)
+								);
+								 tb.append(row);
+							});
+							$(".wrap").append(tb);
+						}
+					}
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="wrap">
+			sdfsdfsdf
+		</div>
+	</body>
+</html>
