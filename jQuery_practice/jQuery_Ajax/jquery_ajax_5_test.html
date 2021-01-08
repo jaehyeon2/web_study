@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<script src="../jquery.js"></script>
+		<script>
+			$(function(){
+				$.ajax({
+					url:"news_test.php",
+					dataType:"xml",
+					success:function(data){
+						var $items=$(data).find("item");
+						
+						if($item.length>0){
+							$items=$item.slice(0, 10);
+							var $ulTag=$("<ul />");
+							$.each($items, function(i, o){
+								var $title=$(o).find("title").text();
+								var $link=$(o).find("link").text();
+								
+								var $aTag=$("<a />")
+								.attr({
+									"href":$link,
+									"target":"_blank"
+								})
+								.text($title);
+								
+								var $liTag=$("<li />").append($aTag);
+								
+								$ulTag.append($liTag);
+							});
+							$(".wrap").append($ulTag);
+						}
+					}
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="wrap">
+			
+		</div>
+	</body>
+</html>
