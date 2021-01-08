@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script src="../jquery.js"></script>
+		<script>
+			$(function(){
+				$.ajax({
+					url:"http://www.khan.co.kr/rss/rssdata/itnews.xml",
+					dataType:"xml",
+					success:function(data){
+						console.log(data);
+					}
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="wrap">
+			
+		</div>
+	</body>
+</html>
