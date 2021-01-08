@@ -8,7 +8,6 @@
 					dataType:"xml",
 					success:function(data){
 						var $items=$(data).find("item");
-						
 						if($item.length>0){
 							$items=$item.slice(0, 10);
 							var $ulTag=$("<ul />");
