@@ -7,9 +7,10 @@
 <script>
 $(function() {
 	$.ajax({
-		url:"news_test.php",
+		url:"news.php",
 		dataType:"xml",
 		success: function(data) {
+			$(".wrap").append("성공");
 			var $items = $(data).find("item");
 			if($items.length > 0) {
 				$items = $items.slice(0,10);
@@ -32,12 +33,16 @@ $(function() {
 				});
 				$(".wrap").append($ulTag);
 			}
+		},
+		error: function(data){
+			$(".wrap").append("실패");
 		}
+		
 	});
 });
 </script>
 </head>
 <body>
-	<div class="wrap">sdf</div>
+	<div class="wrap"></div>
 </body>
 </html>
