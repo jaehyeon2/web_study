@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<script src="../jquery.js"></script>
+		<script src="jquery-ui-1.10.4.custom.min.js"></script>
+		<script>
+			$(function(){
+				$("#startDate").datepicker({
+					minDate: +1,
+					maxDate: "+1M"
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p>
+			<label for="startDate">날짜 선택</label>
+			<input type="text" name="startDate" id="startDate">
+		</p>
+	</body>
+</html>
