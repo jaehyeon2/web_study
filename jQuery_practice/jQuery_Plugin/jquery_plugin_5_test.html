@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script src="../jquery.js"></script>
+		<script>
+			$(function(){
+				$.fn.open = function(eventType, message){ //플러그인 제작
+					var ts=$(this);
+					$.each(ts, function(i, o){
+						$(o).on(eventType, function(){
+							alert(message);
+						})
+					})
+				}
+				$(".btn1").open("click", "welcome"); //플러그인 적용
+				$(".btn2").open("click", "hello");
+			})
+		</script>
+	</head>
+	<body>
+		<p><button class="btn1">button1</button></p>
+		<p><button class="btn2">button2</button></p>
+		<p><button class="btn3">button3</button></p>
+	</body>
+</html>
