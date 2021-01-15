@@ -24,7 +24,7 @@
 		deviceSize.tablet=deviceSize.tablet-sc_w3;
 		deviceSize.mobile=deviceSize.mobile-sc_w3;
 	}
-	
+	console.log(deviceSize.pc);
 	$(win).on("resize", function(){
 		var w_size = $(win).width();
 		if(w_size>=deviceSize.pc&&!$("html").hasClass("pc")){
