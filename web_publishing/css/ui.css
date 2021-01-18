@@ -1,0 +1,76 @@
+#wrap
+{
+	width:100%;
+	height:100%;
+	padding-right:180px;
+}
+#wrap > h1
+{
+	font-size:0;
+}
+#wrap header
+{
+	width:180px;
+	height:100%;
+	position:fixed;
+	right:0px;
+	top:0px;
+	background:url(../images/menu_bg1.png) repeat-y;
+	z-index:11;
+}
+#wrap header nav
+{
+	width:100%;
+	height:100%;
+}
+#wrap header nav ul
+{
+	width:100%;
+	height:100%;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	list-style:none;
+}
+#wrap header nav ul li
+{
+	margin:0px 0px 10px center;
+	padding-left:15px;
+	position:relative;
+}
+#wrap header nav ul li a
+{
+	font-size:16px;
+	color:#fff;
+	font-weight:600;
+	line-height:30px;
+}
+#wrap header nav ul li:after
+{
+	content:"";
+	display:block;
+	width:5px;
+	height:5px;
+	border-radius:50%;
+	background:#fff;
+	position:absolute;
+	left:0px;
+	top:13px;
+}
+
+#container
+{
+	width:100%;
+	height:100%;
+}
+
+header .logo_box
+{
+	position:absolute;
+	right:35px;
+	top:75px;
+}
+header .logo_box img
+{
+	width:100px;
+}
