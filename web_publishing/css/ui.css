@@ -58,12 +58,6 @@
 	top:13px;
 }
 
-#container
-{
-	width:100%;
-	height:100%;
-}
-
 header .logo_box
 {
 	position:absolute;
@@ -73,4 +67,53 @@ header .logo_box
 header .logo_box img
 {
 	width:100px;
+}
+
+#container
+{
+	width:100%;
+	height:100%;
+}
+
+footer
+{
+	width:140px;
+	position:fixed;
+	right:0px;
+	bottom:0px;
+	padding:0px 20px 30px 0px;
+	font-size:11px;
+	color:#7e7e7e;
+	z-index:12;
+}
+
+footer address
+{
+	padding 0px 20px 0px 0px;
+}
+
+footer > a
+{
+	display:block;
+	width:16px;
+	height:16px;
+	position:absolute;
+	top:-31px;
+	transition:.4s; /*animation effect*/
+}
+
+footer > a.face
+{
+	background:url(../images/social_b_facebook.png) no-repeat;
+	right:18px;
+}
+footer > a.twit
+{
+	background:url(../images/social_b_twitter.png) no-repeat;
+	right:48px;
+}
+footer > a.instar
+{
+	background:url(../images/social_b_instar.png) no-repeat;
+	right:80px;
 }
