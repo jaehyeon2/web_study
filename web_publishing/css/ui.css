@@ -117,3 +117,16 @@ footer > a.instar
 	background:url(../images/social_b_instar.png) no-repeat;
 	right:80px;
 }
+
+footer > a.face:hover
+{
+	background:url(../images/social_b_facebook_hover.png) no-repeat;
+}
+footer > a.twit:hover
+{
+	background:url(../images/social_b_twitter_hover.png) no-repeat;
+}
+footer > a.instar:hover
+{
+	background:url(../images/social_b_instar_hover.png) no-repeat;
+}
