@@ -81,7 +81,46 @@ header .logo_box img
 {
 	width:100%;
 	height:100%;
+	position:relative;
+	max-width:1200px;
+	margin:0 auto;
+} 
+#container .content
+{
+	width:25%;
+	height:100%;
+	position:absolute;
+	overflow: hidden;
 }
+#container #menu1
+{
+	left:0%;
+	background:url(../images/content_bg1.png) repeat;
+	
+}
+#container #menu2
+{
+	left:25%;
+	background:url(../images/content_bg2.png) repeat;
+}
+#container #menu3
+{
+	left:50%;
+	background:url(../images/content_bg3.png) repeat;
+}
+#container #menu4
+{
+	left:75%;
+	background:url(../images/content_bg4.png) repeat;
+}
+
+#container .content:before,#container .content:after{content:""; display:block; position:absolute;} 
+#container .content:before{width:1px; height:100%; background:#000; left:0; top:0; z-index:4;}
+#container .content:after{left:30px; top:180px; font-size:25px; font-weight:700; color:#ed3140;}
+#container #menu1:after{content:"회사소개";} 
+#container #menu2:after{content:"도서소개";} 
+#container #menu3:after{content:"FAQ";} 
+#container #menu4:after{content:"Contact Us";}
 
 footer
 {
@@ -97,7 +136,7 @@ footer
 
 footer address
 {
-	padding 0px 20px 0px 0px;
+	padding: 0px 20px 0px 0px;
 }
 
 footer > a
