@@ -57,6 +57,14 @@
 	left:0px;
 	top:13px;
 }
+#wrap header nav ul li:hover a, #wrap header nav ul li:on a
+{
+	color:#ed3140;
+}
+#wrap header nav ul li:hover:after, #wrap header nav ul li:on:after
+{
+	background:#ed3140;
+}
 
 header .logo_box
 {
