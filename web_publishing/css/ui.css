@@ -147,7 +147,51 @@ header .logo_box img
 #container #menu4:after {
 	content: 'Contact Us';
 }
-
+#container #menu4:after
+{
+	content:"Contact Us";
+}
+#container .content .conbox:before{
+	content:"";
+	display:block;
+	position:absolute;
+}
+#container #menu1 .conbox:before {
+	background: url(../images/main_ico1.png) no-repeat;
+	width: 350px;
+	height: 260px;
+	right: -10px;
+	top: 130px;
+	background-size: 100%;
+}
+#container #menu2 .conbox:before {
+	background: url(../images/main_ico2.png) no-repeat;
+	width: 180px;
+	height: 470px;
+	right: -30px;
+	top: 180px;
+	background-size: 100%;
+}
+#container #menu3 .conbox:before {
+	background: url(../images/main_ico3.png) no-repeat;
+	width: 270px;
+	height: 310px;
+	right: -60px;
+	top: 30px;
+	background-size: 100%;
+}
+#container #menu4 .conbox:before {
+	background: url(../images/main_ico4.png) no-repeat;
+	width: 350px;
+	height: 400px;
+	right: -170px;
+	top: 100px;
+	background-size: 100%;
+}
+#container .content h2
+{
+	opacity:0;
+}
 
 footer
 {
