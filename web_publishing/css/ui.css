@@ -154,6 +154,17 @@ html,body
 	background:url(../images/menu_bg1.png) repeat-y;
 	z-index:11;
 }
+header .logo_box
+{
+	position:absolute;
+	right:35px;
+	top:75px;
+}
+header .logo_box img
+{
+	width:100px;
+}
+
 #wrap header nav
 {
 	width:100%;
@@ -166,11 +177,10 @@ html,body
 	display:flex;
 	flex-direction:column;
 	justify-content:center;
-	list-style:none;
 }
 #wrap header nav ul li
 {
-	margin:0px 0px 10px center;
+	margin:0px 0px 10px 30px;
 	padding-left:15px;
 	position:relative;
 }
@@ -193,24 +203,13 @@ html,body
 	left:0px;
 	top:13px;
 }
-#wrap header nav ul li:hover a, #wrap header nav ul li:on a
+#wrap header nav ul li:hover a, #wrap header nav ul li.on a
 {
 	color:#ed3140;
 }
-#wrap header nav ul li:hover:after, #wrap header nav ul li:on:after
+#wrap header nav ul li:hover:after, #wrap header nav ul li.on:after
 {
 	background:#ed3140;
-}
-
-header .logo_box
-{
-	position:absolute;
-	right:35px;
-	top:75px;
-}
-header .logo_box img
-{
-	width:100px;
 }
 
 #container
@@ -331,11 +330,11 @@ header .logo_box img
 
 footer
 {
-	width:140px;
+	width:180px;
 	position:fixed;
 	right:0px;
 	bottom:0px;
-	padding:0px 20px 30px 0px;
+	padding:0px 20px 30px 20px;
 	font-size:11px;
 	color:#7e7e7e;
 	z-index:12;
@@ -343,7 +342,7 @@ footer
 
 footer address
 {
-	padding: 0px 20px 0px 0px;
+	padding: 0px 0px 15px 0px;
 }
 
 footer > a
