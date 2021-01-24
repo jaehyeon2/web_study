@@ -159,6 +159,7 @@ header .logo_box
 	position:absolute;
 	right:35px;
 	top:75px;
+	cursor:pointer;
 }
 header .logo_box img
 {
