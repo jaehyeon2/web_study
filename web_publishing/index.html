@@ -3,6 +3,8 @@
 	<head>
 		<title>HOME</title>
 		<link href="css/ui.css" rel="stylesheet" type="text/css">
+		<script src="js/jquery.js"></script>
+		<script src="js/ui.js"></script>
 	</head>
 	<body>
 		<section id="wrap"><!--모든 내용을 감싸는 콘텐츠-->
@@ -12,10 +14,11 @@
 											  alt="이지스퍼블리싱"></strong>
 				<nav><!--링크 포함 영역-->
 					<ul>
-						<li><a href="#">회사소개</a></li>
-						<li><a href="#">도서소개</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="#">Contact us</a></li>
+						<li data-rol="menu1"><a href="#">회사소개</a></li>
+						<li data-rol="menu2"><a href="#">도서소개</a></li>
+						<li data-rol="menu3"><a href="#">FAQ</a></li>
+						<li data-rol="menu4"><a href="#">Contact us</a></li>
+						<!-- data-rol-> HTML교소에 추가 정보를 저장 가능한 속성-->
 					</ul>
 				</nav>
 			</header>

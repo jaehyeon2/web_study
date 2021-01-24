@@ -225,7 +225,27 @@ header .logo_box img
 	width:25%;
 	height:100%;
 	position:absolute;
-	overflow: hidden;
+}
+#container .content.this
+{
+	width:100%;
+	left:0 !important;/*important -> css 우선순위를 높게 설정*/
+}
+#container .content.prev
+{
+	width:100%;
+	left:-100% !important;
+}
+#container .content.next
+{
+	width:100%;
+	left:100% !important;
+}
+#continer .content.this:before,
+#container .content.this:after,
+#container .content.this .conbox:before
+{
+	opacity:0;
 }
 #container #menu1
 {
