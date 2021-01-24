@@ -225,6 +225,7 @@ header .logo_box img
 	width:25%;
 	height:100%;
 	position:absolute;
+	transition:all .5s;
 }
 #container .content.this
 {
