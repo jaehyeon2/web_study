@@ -12,4 +12,8 @@ $(document).ready(function(){
 		$("#"+id).nextAll().addClass("next");
 		//뒤의 모든 메뉴에 next 클래스를 부여
 	});
+	$(".logo_box").click(function(){
+		$(".content").removeClass("prev this next");;
+		$("#container").css("max-width", "1200px");
+	});
 });
