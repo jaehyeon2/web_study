@@ -228,6 +228,9 @@ header .logo_box img
 	position:absolute;
 	transition:all .5s;
 }
+#container.start .content{
+	top:0;
+}
 #container .content.this
 {
 	width:100%;
@@ -245,9 +248,24 @@ header .logo_box img
 }
 #continer .content.this:before,
 #container .content.this:after,
-#container .content.this .conbox:before
+#container .content.this .conbox:before,
+/*prev, next도 함께 지정하여 애니메이션을 동일하게 맞추어 줌*/
+#container .content.prev:before,
+#container .content.prev:after,
+#container .content.prev .conbox:before,
+#container .content.next .conbox:before,
+#container .content.next:after,
+#container .content.next .conbox:before,
 {
 	opacity:0;
+	transition:all .6s;
+	transition-delay:.3s;
+}
+#container .content.this .conbox:before{
+	transform:translate3d(300px, 0, 0);
+}
+#container .content.this:after{
+	transform:translate3d(-300px, 0, 0);
 }
 #container #menu1
 {
@@ -378,6 +396,23 @@ header .logo_box img
 {
 	padding:30px 50px 50px 50px;
 	opacity:1;
+}
+#container .content
+{
+	top:-100%;
+	transition:all .8s;
+}
+#container .content:nth-of-type(2)
+{
+	transition-delay:.3s;
+}
+#container .content:nth-of-type(3)
+{
+	transition-delay:.6s;
+}
+#container .content:nth-of-type(4)
+{
+	transition-delay:.8s;
 }
 
 footer

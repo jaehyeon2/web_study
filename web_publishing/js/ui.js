@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	$("#container").addClass("start");
 	$("nav li").click(function(){
 		$("#container").css("max-width", "100%");
 		var id=$(this).attr("data-rol");
