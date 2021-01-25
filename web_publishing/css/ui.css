@@ -377,6 +377,8 @@ header .logo_box img
 	font-size:28px;
 	font-weight:400;
 	opacity:1;/*현재 메뉴의 opacity를 1로 하여 h2태그가 보이게 함*/
+	transition:all .6s;
+	transition-delay:1.2s;
 }
 #container .content.this h2:after
 {
