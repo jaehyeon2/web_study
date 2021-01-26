@@ -502,3 +502,18 @@ footer > a.instar:hover{
 .text_box:nth-last-child(1) p{
 	padding:0 170px 0 200px;
 }
+/*도서소개 페이지*/
+#menu2.content h3{
+	font-size:0px;
+}
+#menu2.content.this .conbox{
+	background: url(../images/bookbg.png) no-repeat -15px 360px;
+	max-width:100%;
+}
+.notebook{
+	width:954px;
+	height:650px;
+	margin:100px auto 0 auto;
+	background:url(../images/mackbook.png) no-repeat;
+	background-size:954px;
+}
