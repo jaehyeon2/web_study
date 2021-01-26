@@ -402,6 +402,7 @@ footer > a.instar:hover{
 #container .content.this .conbox .content_wrap{
 	padding: 30px 50px 50px 50px;
 	opacity: 1;
+	/*화면이 사라진 후 content가 나타나도록 딜레이 0.8s*/
 	transition: all 1.7s;
 	transition-delay: 0.8s;
 }
@@ -495,8 +496,9 @@ footer > a.instar:hover{
 	background:url(../images/content_img3.png) no-repeat right top;
 	background-size:170px;
 }
+.text_box:nth-last-child(1) h4{
+	color:#ed3140;
+}
 .text_box:nth-last-child(1) p{
-	width:100%;
-	padding-left:150px;
-	padding-right:170px;
+	padding:0 170px 0 200px;
 }
