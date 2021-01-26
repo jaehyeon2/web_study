@@ -516,4 +516,13 @@ footer > a.instar:hover{
 	margin:100px auto 0 auto;
 	background:url(../images/mackbook.png) no-repeat;
 	background-size:954px;
+	position:relative;
+}
+.detail_content{
+	width:719px;
+	height:453px;
+	position:absolute;
+	left:117px;
+	top:38px;
+	padding:30px 0;
 }
