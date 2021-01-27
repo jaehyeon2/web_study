@@ -625,3 +625,19 @@ footer > a.instar:hover{
 	background-size:20px;
 	right:0;
 }
+.book_rollwrap .book_roll{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.book_rollwrap .book_roll ul{
+	width:1000%;
+}
+.book_rollwrap .book_roll ul li{
+	float:left;
+	width:152px;
+	text-align:center;
+}
+.book_rollwrap .book_roll ul li img{
+	width:100px;
+}
