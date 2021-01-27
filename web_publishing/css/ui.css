@@ -526,3 +526,29 @@ footer > a.instar:hover{
 	top:38px;
 	padding:30px 0;
 }
+.img_book{
+	width:270px;
+	float:left;
+}
+.img_book img{
+	width:270px;
+}
+.book_description{
+	width:449px;
+	float:left;
+	padding 20px 20px 20px 40px;
+}
+.detail_content:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.book_description h4{
+	font-size:31px;
+	font-weight:700;
+	color:#f92d68;
+	line-height:31px;
+}
+.book_description ul li em{
+	font-weight:700;
+}
