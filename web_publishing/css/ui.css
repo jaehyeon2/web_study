@@ -587,3 +587,17 @@ footer > a.instar:hover{
 	font-weight:700;
 	color:#3c4147;
 }
+.commbtn{
+	width:150px;
+	display:inline-block;
+	height:35px;
+	margin-top:20px;
+	font-size:15px;
+	line-height:35px;
+	border-radius:5px;
+	text-align:center;
+}
+.commbtn.pink{
+	background:#f92d68;
+	color:#fff;
+}
