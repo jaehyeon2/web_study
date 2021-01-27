@@ -601,3 +601,27 @@ footer > a.instar:hover{
 	background:#f92d68;
 	color:#fff;
 }
+.book_rollwrap{
+	width:954px;
+	height:150px;
+	margin:40px auto 0 auto;
+	padding:0 20px;
+	position:relative;
+}
+.book_rollwrap > button{
+	display:block;
+	position:absolute;
+	width:20px;
+	height:100%;
+	top:0;
+}
+.book_rollwrap > button.roll_left{
+	background:url(../images/btn_left.png) no-repeat center center;
+	background-size:20px;
+	left:0;
+}
+.book_rollwrap > button.roll_right{
+	background:url(../images/btn_right.png) no-repeat center center;
+	background-size:20px;
+	right:0;
+}
