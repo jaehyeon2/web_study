@@ -34,6 +34,9 @@ $(document).ready(function(){
 			dataType : 'html', //data 타입
 			success : function(data) { //HTTP 요청 성공 후 데이터 전송
 				$(".notebook").html(data);
+			},
+			error : function(){
+				alert("error");
 			}
 		});
 	});
