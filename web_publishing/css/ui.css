@@ -650,3 +650,26 @@ footer > a.instar:hover{
 .book_rollwrap .book_roll ul li img{
 	width:100px;
 }
+/*FAQ 페이지 레이아웃*/
+.tit_faq{
+	color:#fff;
+	position:relative;
+}
+.tit_faq strong{
+	font-size:25px;
+	padding-right:10px;
+}
+.tit_faq span{
+	font-size:14px;
+	font-weight:400;
+}
+.tit_faq:before{
+	content:"";
+	display:block;
+	position:absolute;
+	width:120px;
+	height:150px;
+	background:url(../images/faq_boy.png) no-repeat;
+	right:0px;
+	top:36px;
+}
