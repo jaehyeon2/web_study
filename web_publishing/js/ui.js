@@ -40,4 +40,9 @@ $(document).ready(function(){
 			}
 		});
 	});
+	//아코디언 형태 구현
+	$(".accordio_box ol li").click(function(){
+		$(".accordio_box ol li").removeClass("on");
+		$(this).addClass("on");
+	})
 });
