@@ -44,5 +44,8 @@ $(document).ready(function(){
 	$(".accordio_box ol li").click(function(){
 		$(".accordio_box ol li").removeClass("on");
 		$(this).addClass("on");
+	});
+	$(".close").click(function(){
+		$(".thankyou_message").css("display", "none");
 	})
 });
