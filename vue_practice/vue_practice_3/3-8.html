@@ -1,0 +1,23 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<div id="app">
+			<child-component v-bind:propsdata="message"></child-component>
+		</div>
+		<script src="../js/vue.js"></script>
+		<script>
+			Vue.component("child-component",{
+				props:["propsdata"],
+				template:"<p>{{ propsdata }}</p>",
+			});
+			new Vue({
+				el:"#app",
+				data:{
+					message:"Hello Vue! pass from Parent Component"
+				}
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<div id="app">
+			<child-component v-on:show-log="printText"></child-component>
+		</div>
+		<script src="../js/vue.js"></script>
+		<script>
+			Vue.component("child-component",{
+				template:'<button v-on:click="showLog">show</button>',
+				methods:{
+					showLog:function(){
+						this.$emit("show-log");
+					}
+				}
+			});
+			
+			var app=new Vue({
+				el:"#app",
+				data:{
+					message:"Hello Vue! passed from Parent Component"
+				},
+				methods:{
+					printText:function(){
+						console.log("received an event");
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
