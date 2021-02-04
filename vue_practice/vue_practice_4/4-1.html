@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script src="../js/vue.js"></script>
+		<script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>뷰 라우터 예제</h1>
+			<p>
+				<router-link to="/main">Main component</router-link>
+				<router-link to="/login">Login component</router-link>
+			</p>
+			<router-view></router-view>
+			<!--URL 값에 따라 갱신되는 화면 영역-->
+		</div>
+		<script>
+			var Main={template:"<div>main</div>"};
+			var Login={template:"<div>login</div>"};
+			//main, login component definition
+			
+			var routes=[
+				{ path:"/main", component: Main },
+				{ path:"/Login", component: Login }
+			];
+			//각 URL에 맞춰 표시할 컴포넌트 지정
+			
+			var router = new VueRouter({
+				routes
+			});
+			//뷰 라우터 정의
+			
+			var app=new Vue({
+				router
+			}).$mount("#app");
+			//뷰 인스턴스에 라우터 추가
+		</script>
+	</body>
+</html>
