@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<script src="../js/vue.js"></script>
+		<script src="../js/vue-resource.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<button v-on:click="getData">
+				프레임워크 목록 가져오기
+			</button>
+		</div>
+		<script>
+			new Vue({
+				el: '#app',
+				methods: {
+					getData: function() {
+						this.$http.get("https://raw.githubusercontent.com/joshua1988/doit-vuejs/master/data/demo.json")
+							.then(function(response) {
+							console.log(response);
+							console.log(JSON.parse(response.data));
+						});
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
