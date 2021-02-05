@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<script src="../js/vue.js"></script>
+		<script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			main
+			<router-view></router-view>
+		</div>
+		<script>
+			var User={
+				template: `
+					<div>
+						User Component
+						<router-view></router-view>
+					</div>
+				`
+			};
+			var UserProfile={template:"<p>User Profile</p>"};
+			var UserPost={template:"<p>User Post Component</p>"};
+			
+			var routes=[
+				{
+					path:"/user",
+					component:User,
+					children:[
+						{
+							path:"posts",
+							component:UserPost
+						},
+						{
+							path:"profile",
+							component:UserProfile
+						},
+					]
+				}
+			];
+			
+			var router=new VueRouter({
+				routes
+			});
+			
+			var app=new Vue({
+				router
+			}).$mount("#app");
+		</script>
+	</body>
+</html>
