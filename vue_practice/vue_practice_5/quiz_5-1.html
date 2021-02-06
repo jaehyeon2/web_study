@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<script src="../js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<header>
+				<h3>
+					{{message}}<br>
+					{{message2}}
+					
+				</h3>
+			</header>
+			<section>
+				<p v-bind:id="uid"></p>
+				<button v-on:click="clickBtn">alert</button><br>
+				<button v-on:click="clickBtn2">alert2</button>
+				<ul v-if="flag">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</section>
+		</div>
+		<script>
+			var app=new Vue({
+				el:"#app",
+				data:{
+					message:"Hello vue.js",
+					message2:"Hello World!",
+					
+					uid:"10",
+					flag:true
+				},
+				methods:{
+					clickBtn(){
+						console.log("hi");
+					},
+					clickBtn2(){
+						alert("hi");
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
