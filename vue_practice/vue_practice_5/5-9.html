@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<script src="../js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input v-model="message">
+		</div>
+		<script>
+			new Vue({
+				el:"#app",
+				data:{
+					message:"Hello Vue.js!"
+				},
+				//watch 속성은 데이터 변화를 감지하여 특정 로직을 수행
+				//input select textarea 태그에만 사용가능
+				watch:{
+					message:function(data){
+						console.log("message의 값이 바뀝니다:", data);
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
