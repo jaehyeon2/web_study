@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<script src="../js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p>{{ message }}</p>
+			<button v-on:click="reverseMsg">
+				문자열 역순
+			</button>
+			<script>
+				new Vue({
+					el:"#app",
+					data:{
+						message:"Hello Vue.js!"
+					},
+					methods/*cmoputed*/:{
+						reverseMsg:function(){
+							this.message = this.message.split("").reverse().join("");
+							return this.message;
+						}
+					}
+					//computed는 대상 데이터의 값이 변경되면 자동적으로 수행
+					//methods는 함수가 호출될 때만 로직 수행
+				});
+			</script>
+		</div>
+	</body>
+</html>

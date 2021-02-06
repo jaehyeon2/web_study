@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<script src="../js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<a v-if="flag">v-if="flag"</a>
+			<!--참 거짓 여부에 따라 표시 여부 결정-->
+			<ul>
+				<li v-for="system in systems">{{ system }}</li>
+				<!--뷰 데이터의 갯수만큼 태그를 반복해서 출력-->
+			</ul>
+			<p v-show="flag">v-show="flag"</p>
+			<!--v-if와 유사하지만 display:none; 으로 표시됨-->
+			<h5 v-bind:id="uid">v-bind:id="uid"</h5>
+			<!--뷰 데이터 속성을 연결-->
+			<button v-on:click="popupAlert">alert button</button>
+		</div>
+		<script>
+			new Vue({
+				el:"#app",
+				data:{
+					flag:true,
+					systems:["first", "second", "third"],
+					uid:10
+				},
+				methods:{
+					popupAlert:function(){
+						return alert("caution!");
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
